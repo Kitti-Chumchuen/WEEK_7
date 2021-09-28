@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include<ctype.h>
+#include<string.h>
+
+int main () {
+  char a[100],c;
+  int range = 0,b;
+  printf("Enter a string : ");
+  scanf("%[^\n]",a);
+  range = strlen(a);
+  for(int i=0; i<range; i++){
+    c = a[i];
+    if(isupper(c)){
+      a[i] = tolower(c);
+    }
+    else {
+      a[i] = toupper(c);
+    }
+  }
+  printf("%s",a);
+  return 0;
+}
